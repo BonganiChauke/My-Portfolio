@@ -60,9 +60,6 @@ html::-webkit-scrollbar-thumb {
   background: red;
 }
 
-body {
-  background-color: var(--cultured);
-}
 
 li {
   list-style: none;
@@ -144,6 +141,17 @@ a {
   padding: 80px 20px;
   transition: 0.15s ease-in;
   z-index: 3;
+  visibility: hidden;
+  opacity: 0;
+  animation: show-content 1.5s linear forwards;
+  animation-delay: 1.2s;
+}
+
+@keyframes show-content {
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .navbar.active {
@@ -193,6 +201,205 @@ a {
   opacity: 1;
 }
 
+/* home section */
+.home{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 60px 9% 0;
+  gap: 50px;
+  color: black;
+  visibility: hidden;
+  opacity: 0;
+  animation: show-content 1.5s linear forwards;
+  animation-delay: 1.6s;
+}
+
+
+  
+
+.home-info p {
+  font-size: 16px;
+  margin: 10px 0 25px;
+}
+
+.home-info .btn-sci{
+  display: flex;
+  align-items: center;
+}
+
+.home-info h1{
+  font-size: 55px;
+  margin-top: 110px;
+}
+
+.home-info h2{
+  font-size: 26px;
+  margin-top: 100px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  background: red;
+  border: 2px solid --orange-web;
+  border-radius: 40px;
+  box-shadow: 0 0 10px --orange-web;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+
+.btn:hover{
+  background: var(--silver-chalice);
+  color: black;
+  box-shadow: none;
+}
+
+.home-info h2 span{
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: .7px red;
+  animation: display-text 16s linear infinite;
+  animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+
+  25%, 100%{
+    display: none;
+  }
+  
+}
+
+.home-info h2 span::before{
+  content: attr(data-text);
+  position: absolute;
+  width: 0;
+  border-right: 2px solid red;
+  color: red;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+  10%, 100%{
+    width: 0;
+  }
+
+  70%, 90%{
+    width: 100%;
+  }
+}
+
+.home-info .btn-sci .sci{
+  margin-left: 20px;
+}
+
+.home-info .btn-sci .sci a {
+  display: inline-flex;
+  padding: 8px;
+  border: 2px solid red;
+  border-radius: 50%;
+  font-size: 40px;
+  color: red;
+  margin: 0 8px;
+  transition: .5s;
+}
+
+.home-info .btn-sci .sci a:hover {
+  background: red;
+  color: #0c0c0c;
+  box-shadow: 0 0 10px red;
+
+}
+
+.home-img .img-box{
+  position: relative;
+  width: 32vw;
+  height: 32vw;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  background: white;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+.home-img .img-box::before, 
+.home-img .img-box::after{
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: conic-gradient(transparent, transparent, transparent, rgb(49, 8, 8));
+  transform: rotate(0deg);
+  animation: rotate-border 10s linear infinite;
+}
+
+.home-img .img-box::after{
+  animation-delay: -5s;
+}
+
+@keyframes rotate-border {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.home-img .img-box .img-item{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  border: .1px solid --cultured;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+
+.home-img .img-box .img-item img{
+  position: absolute;
+  display: block;
+  width: 85%;
+  object-fit: cover;
+} 
+
+.bars-animation{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: -1;
+}
+
+.bars-animation .bar{
+  width: 100%;
+  height: 100%;
+  background: var(--cultured);
+  transform: translateY(-100%);
+  animation: show-bars .5s ease-in-out forwards;
+  animation-delay: calc(.1s * var(--i));
+
+}
+
+@keyframes show-bars {
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+
+
 /* media queries */
 @media (min-width: 550px) {
     :root {
@@ -205,12 +412,13 @@ a {
     }
   
     .h2 {
-      --fs-1: 35px;
+      --fs-1: 30px;
     }
   
     .header .logo {
       min-width: 250px;
     }
+    
     
   }
   
@@ -237,7 +445,7 @@ a {
     }
   
     .h2 {
-      --fs-1: 40px;
+      --fs-1: 20px;
     }
   
     .header .logo {
@@ -296,8 +504,8 @@ a {
     .overlay {
       display: none;
     }
-
     
+
   }
   
   /* responsive for 1200px */
@@ -305,4 +513,6 @@ a {
     .container {
       max-width: 1150px;
     }
+
+    
   }
