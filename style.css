@@ -397,6 +397,96 @@ a {
   padding: 3rem;
 }
 
+/* Service style */
+
+.heading {
+  font-size: 4.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heading span{
+  color: red;
+}
+
+.service-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  transition: .5s;
+}
+
+.service-container .services-box{
+  padding: 3rem 2.5rem;
+  background: var(--floral-white);
+  border: .2rem solid white;
+  border-radius: 1rem;
+  transition: .5s;
+}
+
+.service-container .services-box:hover{
+ border-color: red;
+ transform: scale(1.02);
+}
+
+.services-box .icon i {
+  font-size: 4.5rem;
+  transition: .5s;
+}
+
+.services-box:hover .icon :not(a i) {
+  color: red;
+}
+
+.services-box .icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services-box .icon a {
+ display: inline-flex;
+ background: #e0e0eb;
+ border-radius: 50%;
+ padding: 1rem;
+ transition: .5s;
+}
+
+.services-box:hover .icon a {
+  background: red;
+}
+
+.services-box:hover .icon i {
+  background: red;
+}
+
+.services-box .icon a i {
+  font-size: 3rem;
+  color: black;
+  transition: .5s;
+  transform: rotate(225deg);
+  
+ }
+
+ .services-box h3{
+  font-size: 3rem;
+  margin: .5rem 0 2rem;
+  transition: .5s;
+ }
+
+ .services-box:hover h3{
+  color: red;
+ }
+
+ .services-box .icon a:hover i {
+  transform: rotate(180deg);
+ }
+
+ .services-box p{
+  font-size: 1rem;
+ }
+
 /* media queries */
 @media (min-width: 550px) {
     :root {
