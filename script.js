@@ -24,3 +24,19 @@ window?.addEventListener("scroll", function () {
   window.scrollY >= 20 ? header?.classList.add("active") : header?.classList.remove("active");
 
 });
+
+// resume section buttons
+const resumeBtns = document.querySelectorAll('.resume-btn');
+
+// event function for resume buttons
+resumeBtns.forEach((btn, idx) => {
+
+  //event listener
+  btn.addEventListener('click', () => {
+    resumeBtns.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    btn.classList.add('active');
+  })
+
+});
