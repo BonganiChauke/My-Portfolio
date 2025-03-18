@@ -17,6 +17,22 @@
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <link rel="stylesheet" href="/style.css" />
   <title>Bongani Chauke</title>
+
+  <style>
+
+    @media screen and (max-width: 1200px){
+      html{
+        font-size: 60%;
+      }
+    }
+
+    @media screen and (max-width: 992px){
+      section {
+        padding: 10rem 4% 2rem;
+      }
+    }
+
+  </style>
 </head>
 
 <body>
@@ -28,7 +44,7 @@
       <div class="container">
         <div class="overlay" data-overlay></div>
 
-        <a href="#" class="logo"><img class="logo" src="./Images/Logo-no-bg.png" alt="Logo"/></a>
+        <a href="/index.html" class="logo"><img class="logo" src="./Images/Logo-no-bg.png" alt="Logo"/></a>
 
         <button class="menu-open-btn" data-menu-open-btn>
           <ion-icon name="menu-outline"></ion-icon>
@@ -39,7 +55,7 @@
             <ion-icon name="close-outline"></ion-icon>
           </button>
 
-          <a href="#" class="logo"><img class="logo" src="/Images/Logo-no-bg.png" alt="Logo"/></a>
+          <a href="/index.html" class="logo"><img class="logo" src="/Images/Logo-no-bg.png" alt="Logo"/></a>
 
           <ul class="navbar-list">
             <li><a href="#" class="navbar-link">Home</a></li>
@@ -90,8 +106,8 @@
 
               <a href="#" class="btn"> Download CV </a>
               <div class="sci">
-                <a href="https://github.com/BonganiChauke"><box-icon type='logo' name='github'></box-icon></a>
-                <a href="http://www.linkedin.com/in/bongani-chauke-0a0944205"><box-icon type='logo' name='linkedin-square'></box-icon></a>
+                <a href="https://github.com/BonganiChauke"><box-icon type="logo" name="github"></box-icon></a>
+                <a href="http://www.linkedin.com/in/bongani-chauke-0a0944205"><box-icon type="logo" name="linkedin-square"></box-icon></a>
 
               </div>
 
@@ -107,6 +123,48 @@
             </div>
           </div>
 
+        </section>
+
+        <section class="contact">
+          <div class="contact-container">
+            <div class="contact-box">
+              <h2>Let's Work Together</h2>
+              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro similique ratione unde doloribus placeat tenetur assumenda alias laborum dolorem minima praesentium architecto voluptate dignissimos, soluta itaque ipsam voluptas asperiores! Nemo?</p>
+              <div class="contact-detail">
+                <box-icon type="solid" name="phone"></box-icon>
+                <div class="detail">
+                  <p>Phone</p>
+                  <p> (+27) 67 234 2495</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <box-icon name="envelope" type="solid" ></box-icon>
+                <div class="detail">
+                  <p>Email</p>
+                  <p>bonganirm11@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-box">
+              <form action="" class="form">
+
+                <h2 class="heading">Contact <span>Me!</span></h2>
+                <div class="field-box">
+                  <input type="text" placeholder="First Name" required>
+                  <input type="text" placeholder="Last Name" required>
+                  <input type="email" placeholder="Email" required>
+                  <input type="text" placeholder="Phone Number">
+                  <textarea name="" id="" placeholder="Message" required></textarea>
+                  
+                </div>
+
+                <button class="btn" type="submit">Send Message</button>
+
+              </form>
+            </div>
+
+          </div>
         </section>
 
         <!-- Services Section -->
@@ -140,6 +198,14 @@
               <h3>Data Analyst</h3>
               <p>Leverages SQL and Python to analyze and interpret data, delivering actionable insights that drive effective decision-making. Combines technical expertise with a problem-solving mindset to optimize processes and provide clear visualizations for impactful reporting.</p>
             </div>
+            <div class="services-box">
+              <div class="icon">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <a href="#"><box-icon name="arrow-back"></box-icon></a>
+              </div>
+              <h3>Tutor</h3>
+              <p>Leverages SQL and Python to analyze and interpret data, delivering actionable insights that drive effective decision-making. Combines technical expertise with a problem-solving mindset to optimize processes and provide clear visualizations for impactful reporting.</p>
+            </div>
           </div>
 
          </section>
@@ -158,4 +224,4 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
-</html>
+</ht
