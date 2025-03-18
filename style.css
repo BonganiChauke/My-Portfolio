@@ -203,6 +203,11 @@ a {
 }
 
 section{
+  align-items: center;
+  justify-content: center;
+  padding: 60px 9% 0;
+  margin-bottom: 6rem;
+  gap: 50px;
   visibility: hidden;
   opacity: 0;
   animation: show-content 1.5s linear forwards;
@@ -352,7 +357,6 @@ section{
 }
 
 
-
 .home-img .img-box .img-item img{
   position: absolute;
   display: block;
@@ -410,8 +414,10 @@ section{
 }
 
 .service-container{
+  margin-top: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  height: 5rem;
   gap: 2rem;
   margin-bottom: 2rem;
   transition: .5s;
@@ -435,7 +441,7 @@ section{
   transition: .5s;
 }
 
-.services-box:hover .icon :not(a i) {
+.services-box:hover .icon :not(a i box-icon) {
   color: red;
 }
 
@@ -457,8 +463,12 @@ section{
   background: red;
 }
 
-.services-box:hover .icon i {
+.services-box:hover .icon i box-icon {
   background: red;
+}
+ 
+box-icon:hover {
+  color: red;
 }
 
 .services-box .icon a i {
@@ -479,8 +489,8 @@ section{
   color: red;
  }
 
- .services-box .icon a:hover i {
-  transform: rotate(280deg);
+ .services-box .icon a:hover box-icon {
+  transform: rotate(240deg);
  }
 
  .services-box p{
@@ -542,6 +552,7 @@ section{
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 3rem;
+  border-radius: 2rem;
 }
 
 .contact-container .contact-box:first-child{
@@ -568,8 +579,6 @@ section{
 
 .contact-detail box-icon {
   display: inline-flex;
-  background: var(--silver-chalice);
-  color: black;
   font-size: 3rem;
   padding: 1.3rem;
   border-radius: .6rem;
@@ -583,8 +592,8 @@ section{
 .contact-box form{
   background: var(--cultured);
   padding: 2.5rem 3.5rem 3.5rem;
-  border-radius: 1rem;
   text-align: center;
+  border-radius: .5rem;
 }
 
 .contact-box .heading{
@@ -600,10 +609,8 @@ section{
 .contact-box .field-box input,
 .contact-box .field-box textarea {
   padding: 1.5rem;
-  border: .15rem solid;
-  border-radius: 1rem;
   font-size: 1.6rem;
-  color: #0c0c0c;
+  border: .12rem solid transparent;
 }
 
 .contact-box .field-box textarea{
@@ -614,11 +621,7 @@ section{
 
 .contact-box .field-box input:focus,
 .contact-box .field-box textarea:focus {
-  border-color: red;
-}
-
-input:focus{
-  border: .15rem solid red;
+  border-color:  red;
 }
 
 .contact-box .btn{
