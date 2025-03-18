@@ -202,6 +202,13 @@ a {
   animation-delay: 1.6s;
 }
 
+section{
+  visibility: hidden;
+  opacity: 0;
+  animation: show-content 1.5s linear forwards;
+  animation-delay: 1.6s;
+}
+
 .home-info p {
   font-size: 16px;
   margin: 10px 0 25px;
@@ -211,7 +218,6 @@ a {
   display: flex;
   align-items: center;
 }
-
 
 
 .home-info h2{
@@ -529,6 +535,96 @@ a {
 
 .home-info .h1{
   font-size: 2rem;
+}
+
+/* contact form styling */
+.contact-container{
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3rem;
+}
+
+.contact-container .contact-box:first-child{
+  align-self: center;
+}
+
+.contact-box h2{
+  font-size: 4.5rem;
+}
+
+.contact-box p{
+  font-size: 1rem;
+}
+
+.contact-box .desc{
+  margin: 1.5rem 0 2.5rem;
+}
+
+.contact-box .contact-detail{
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.contact-detail box-icon {
+  display: inline-flex;
+  background: var(--silver-chalice);
+  color: black;
+  font-size: 3rem;
+  padding: 1.3rem;
+  border-radius: .6rem;
+  margin-right: 1.5rem;
+}
+
+.contact-detail .detail p:first-child {
+  color: red;
+}
+
+.contact-box form{
+  background: var(--cultured);
+  padding: 2.5rem 3.5rem 3.5rem;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.contact-box .heading{
+  font-size: 3.5rem;
+}
+
+.contact-box .field-box{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.contact-box .field-box input,
+.contact-box .field-box textarea {
+  padding: 1.5rem;
+  border: .15rem solid;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  color: #0c0c0c;
+}
+
+.contact-box .field-box textarea{
+  grid-column: 1 / -1;
+  height: 24rem;
+  resize: none;
+}
+
+.contact-box .field-box input:focus,
+.contact-box .field-box textarea:focus {
+  border-color: red;
+}
+
+input:focus{
+  border: .15rem solid red;
+}
+
+.contact-box .btn{
+  margin-top: 2rem;
+  cursor: pointer;
+
 }
 
 /* media queries */
