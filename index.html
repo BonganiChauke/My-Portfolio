@@ -19,16 +19,88 @@
   <title>Bongani Chauke</title>
 
   <style>
-
-    @media screen and (max-width: 1200px){
-      html{
+    @media screen and (max-width: 1200px) {
+      html {
         font-size: 60%;
       }
     }
 
-    @media screen and (max-width: 992px){
+    @media screen and (max-width: 992px) {
       section {
         padding: 10rem 4% 2rem;
+      }
+
+      .btn-sci .sci{
+        display: flex;
+      }
+
+      .btn{
+        width: 200px;
+        text-align: center;
+      }
+      
+
+    }
+
+    @media screen and (max-width: 810px) {
+      .contact-box .field-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .home{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .home-img .img-box{
+        width: 35rem;
+        height: 35rem;
+        margin-top: 30rem;
+        margin-left: 18%;
+        justify-content: center;
+      }
+
+      .contact-box .field-box{
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .home-img .img-box{
+        width: 30rem;
+        height: 30rem;
+
+      }
+
+      .contact-box .field-box{
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .home-detail {
+        text-align: center;
+      }
+
+      .home-detail .btn-sci{
+        flex-direction: column-reverse;
+      }
+
+      .home-detail .btn-sci .sci{
+        margin-left: 0;
+        margin-bottom: 2rem;
+      }
+
+      .contact-box form{
+        padding: 2.5rem 3rem 3.5rem;
+      }
+
+      .contact-box h2{
+        font-size: 3.5rem;
       }
     }
 
@@ -44,7 +116,7 @@
       <div class="container">
         <div class="overlay" data-overlay></div>
 
-        <a href="/index.html" class="logo"><img class="logo" src="./Images/Logo-no-bg.png" alt="Logo"/></a>
+        <a href="/index.html" class="logo"><img class="logo" src="./Images/Logo-no-bg.png" alt="Logo" /></a>
 
         <button class="menu-open-btn" data-menu-open-btn>
           <ion-icon name="menu-outline"></ion-icon>
@@ -55,7 +127,7 @@
             <ion-icon name="close-outline"></ion-icon>
           </button>
 
-          <a href="/index.html" class="logo"><img class="logo" src="/Images/Logo-no-bg.png" alt="Logo"/></a>
+          <a href="/index.html" class="logo"><img class="logo" src="/Images/Logo-no-bg.png" alt="Logo" /></a>
 
           <ul class="navbar-list">
             <li><a href="#" class="navbar-link">Home</a></li>
@@ -100,14 +172,18 @@
               <span style="--i:2;" data-text="Backend Developer">Backend Developer</span>
               <span style="--i:1;" data-text="Data Engineer">Data Engineer</span>
             </h2>
-            <p class="p"> Hi, My name is Bongani Chauke a passionate Junior Software Developer with a Diploma in Information Technology in Software Development NQF 6 from IIE Rosebank College and over a year of experience in software engineering. I specialize in Python, Java, SQL, C#, Kotlin, HTML and CSS and enjoy building responsive web applications, mobile apps, and robust backend systems. </p>
+            <p class="p"> Hi, My name is Bongani Chauke a passionate Junior Software Developer with a Diploma in
+              Information Technology in Software Development NQF 6 from IIE Rosebank College and over a year of
+              experience in software engineering. I specialize in Python, Java, SQL, C#, Kotlin, HTML and CSS and enjoy
+              building responsive web applications, mobile apps, and robust backend systems. </p>
 
             <div class="btn-sci">
 
               <a href="#" class="btn"> Download CV </a>
               <div class="sci">
                 <a href="https://github.com/BonganiChauke"><box-icon type="logo" name="github"></box-icon></a>
-                <a href="http://www.linkedin.com/in/bongani-chauke-0a0944205"><box-icon type="logo" name="linkedin-square"></box-icon></a>
+                <a href="http://www.linkedin.com/in/bongani-chauke-0a0944205"><box-icon type="logo"
+                    name="linkedin-square"></box-icon></a>
 
               </div>
 
@@ -129,16 +205,18 @@
           <div class="contact-container">
             <div class="contact-box">
               <h2>Let's Work Together</h2>
-              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro similique ratione unde doloribus placeat tenetur assumenda alias laborum dolorem minima praesentium architecto voluptate dignissimos, soluta itaque ipsam voluptas asperiores! Nemo?</p>
+              <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro similique ratione unde
+                doloribus placeat tenetur assumenda alias laborum dolorem minima praesentium architecto voluptate
+                dignissimos, soluta itaque ipsam voluptas asperiores! Nemo?</p>
               <div class="contact-detail">
-                <box-icon type="solid" name="phone"></box-icon>
+                <i class="fa fa-phone" aria-hidden="true"></i>
                 <div class="detail">
                   <p>Phone</p>
                   <p> (+27) 67 234 2495</p>
                 </div>
               </div>
               <div class="contact-detail">
-                <box-icon name="envelope" type="solid" ></box-icon>
+                <i class="fa fa-envelope-o" aria-hidden="true"></i>
                 <div class="detail">
                   <p>Email</p>
                   <p>bonganirm11@gmail.com</p>
@@ -151,12 +229,12 @@
 
                 <h2 class="heading">Contact <span>Me!</span></h2>
                 <div class="field-box">
-                  <input type="text" placeholder="First Name" required>
-                  <input type="text" placeholder="Last Name" required>
-                  <input type="email" placeholder="Email" required>
-                  <input type="text" placeholder="Phone Number">
-                  <textarea name="" id="" placeholder="Message" required></textarea>
-                  
+                  <input type="text" placeholder="First Name" id="first_name" required>
+                  <input type="text" placeholder="Last Name" id="last_name" required>
+                  <input type="email" placeholder="Email" id="email" required>
+                  <input type="text" placeholder="Phone Number" id="phone_number">
+                  <textarea name="" id="message" placeholder="Message" required></textarea>
+
                 </div>
 
                 <button class="btn" type="submit">Send Message</button>
@@ -168,35 +246,42 @@
         </section>
 
         <!-- Services Section -->
-         <section class="services">
+        <section class="services">
 
           <h2 class="heading"> My <span>Services</span> </h2>
 
           <div class="service-container">
             <div class="services-box">
               <div class="icon">
-                <box-icon name="code"></box-icon>
+                <i class="fa fa-code" aria-hidden="true"></i>
                 <a href="#"><box-icon name="arrow-back"></box-icon></a>
               </div>
               <h3>Web Developer</h3>
-              <p>Crafts responsive and engaging websites using HTML, CSS, and JavaScript. Skilled in implementing user-friendly designs and validating forms with JavaScript to enhance functionality and accessibility. Experienced in creating web solutions like disaster management platforms to address real-world challenges.</p>
+              <p>Crafts responsive and engaging websites using HTML, CSS, and JavaScript. Skilled in implementing
+                user-friendly designs and validating forms with JavaScript to enhance functionality and accessibility.
+                Experienced in creating web solutions like disaster management platforms to address real-world
+                challenges.</p>
             </div>
 
             <div class="services-box">
               <div class="icon">
-                <box-icon type="solid" name="mobile"></box-icon>
+                <i class="fa fa-mobile" aria-hidden="true"></i>
                 <a href="#"><box-icon name="arrow-back"></box-icon></a>
               </div>
               <h3>Mobile Developer</h3>
-              <p> Develops Android applications with Kotlin and Jetpack Compose, focusing on intuitive user interfaces and seamless navigation. Proficient in integrating Firebase for real-time data management and implementing features like login systems, onboarding screens, and profile management.</p>
+              <p> Develops Android applications with Kotlin and Jetpack Compose, focusing on intuitive user interfaces
+                and seamless navigation. Proficient in integrating Firebase for real-time data management and
+                implementing features like login systems, onboarding screens, and profile management.</p>
             </div>
             <div class="services-box">
               <div class="icon">
-                <box-icon type="solid" name="data"></box-icon>
+                <i class="fa fa-database" aria-hidden="true"></i>
                 <a href="#"><box-icon name="arrow-back"></box-icon></a>
               </div>
               <h3>Data Analyst</h3>
-              <p>Leverages SQL and Python to analyze and interpret data, delivering actionable insights that drive effective decision-making. Combines technical expertise with a problem-solving mindset to optimize processes and provide clear visualizations for impactful reporting.</p>
+              <p>Leverages SQL and Python to analyze and interpret data, delivering actionable insights that drive
+                effective decision-making. Combines technical expertise with a problem-solving mindset to optimize
+                processes and provide clear visualizations for impactful reporting.</p>
             </div>
             <div class="services-box">
               <div class="icon">
@@ -204,11 +289,13 @@
                 <a href="#"><box-icon name="arrow-back"></box-icon></a>
               </div>
               <h3>Tutor</h3>
-              <p>Leverages SQL and Python to analyze and interpret data, delivering actionable insights that drive effective decision-making. Combines technical expertise with a problem-solving mindset to optimize processes and provide clear visualizations for impactful reporting.</p>
+              <p>Leverages SQL and Python to analyze and interpret data, delivering actionable insights that drive
+                effective decision-making. Combines technical expertise with a problem-solving mindset to optimize
+                processes and provide clear visualizations for impactful reporting.</p>
             </div>
           </div>
 
-         </section>
+        </section>
 
 
       </article>
