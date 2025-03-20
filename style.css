@@ -101,7 +101,6 @@ a {
 
 .header.active {
   background: white;
-
 }
 
 .header .logo {
@@ -207,12 +206,12 @@ section {
   align-items: center;
   justify-content: center;
   padding: 60px 9% 0;
-  margin-bottom: 6rem;
   gap: 50px;
   visibility: hidden;
   opacity: 0;
   animation: show-content 1.5s linear forwards;
   animation-delay: 1.6s;
+  height: auto;
 }
 
 .home-info p {
@@ -402,7 +401,6 @@ section {
 }
 
 /* Service style */
-
 .heading {
   font-size: 4.5rem;
   text-align: center;
@@ -414,17 +412,15 @@ section {
 }
 
 .service-container {
-  margin-top: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  height: 5rem;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  height: 2rem;
+  gap: 3rem;
   transition: 0.5s;
 }
 
 .service-container .services-box {
-  padding: 3rem 2.5rem;
+  padding: 2rem 2rem;
   background: var(--floral-white);
   border: 0.2rem solid white;
   border-radius: 1rem;
@@ -437,7 +433,7 @@ section {
 }
 
 .services-box .icon i {
-  font-size: 4.5rem;
+  font-size: 4rem;
   transition: 0.5s;
 }
 
@@ -496,6 +492,10 @@ box-icon:hover {
   font-size: 1rem;
 }
 
+.services-box{
+  margin-bottom: 2rem;
+}
+
 /* resume section */
 .resume-container {
   display: grid;
@@ -547,6 +547,9 @@ box-icon:hover {
 }
 
 /* contact form styling */
+.contact{
+  background: rgb(221, 209, 192);
+}
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
@@ -595,6 +598,7 @@ box-icon:hover {
   padding: 2.5rem 3.5rem 3.5rem;
   text-align: center;
   border-radius: 2rem;
+  margin-bottom: 2rem;
 }
 
 .contact-box .heading {
@@ -631,6 +635,11 @@ box-icon:hover {
   cursor: pointer;
 }
 
+.connect-text {
+  color: blue;
+  font-size: 2rem;
+}
+
 /* media queries */
 @media (min-width: 550px) {
   :root {
@@ -653,7 +662,6 @@ box-icon:hover {
   .home-img .img-box {
     margin-top: 6rem;
   }
-  
 
   .home-info {
     margin-top: 4rem;
