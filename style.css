@@ -203,15 +203,14 @@ a {
 }
 
 section {
-  align-items: center;
-  justify-content: center;
-  padding: 60px 9% 0;
+  padding: 10rem 9% 2rem;
+  height: 100%;
+  width: 100%;
   gap: 50px;
   visibility: hidden;
   opacity: 0;
   animation: show-content 1.5s linear forwards;
   animation-delay: 1.6s;
-  height: auto;
 }
 
 .home-info p {
@@ -420,7 +419,7 @@ section {
 }
 
 .service-container .services-box {
-  padding: 2rem 2rem;
+  padding: 3rem 2.5rem;
   background: var(--floral-white);
   border: 0.2rem solid white;
   border-radius: 1rem;
@@ -471,7 +470,7 @@ box-icon:hover {
   font-size: 3rem;
   color: black;
   transition: 0.5s;
-  transform: rotate(180deg);
+  transform: rotate(225deg);
 }
 
 .services-box h3 {
@@ -492,7 +491,7 @@ box-icon:hover {
   font-size: 1rem;
 }
 
-.services-box{
+.services-box {
   margin-bottom: 2rem;
 }
 
@@ -547,7 +546,7 @@ box-icon:hover {
 }
 
 /* contact form styling */
-.contact{
+.contact {
   background: rgb(221, 209, 192);
 }
 .contact-container {
