@@ -730,6 +730,34 @@ box-icon:hover {
   display: block;
 }
 
+/* image to be responsive */
+.img-container {
+  position: relative;
+  width: 100%;
+}
+
+/* The overlay effect - lays on top of the container and over the image */
+.img-container .overlay-img {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 15px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+}
+
+/* fade in the overlay title */
+.img-container:hover .overlay-img {
+  opacity: 1;
+  border-radius: 0 0 15px 15px;
+}
+
 /* media queries */
 @media (min-width: 550px) {
   :root {
