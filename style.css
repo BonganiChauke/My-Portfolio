@@ -391,13 +391,6 @@ section {
   margin-bottom: 1rem;
 }
 
-.home-img {
-  width: 100%;
-  height: 100%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 3rem;
-}
 
 /* Service style */
 .heading {
@@ -410,18 +403,22 @@ section {
   color: red;
 }
 
+.services{
+  padding: 60px 9% 0;
+}
+
 .service-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  height: 2rem;
-  gap: 3rem;
+  height: 5rem;
+  gap: 5rem;
   transition: 0.5s;
 }
 
 .service-container .services-box {
   padding: 3rem 2.5rem;
   background: var(--floral-white);
-  border: 0.2rem solid white;
+  border: 0.2rem solid red;
   border-radius: 1rem;
   transition: 0.5s;
 }
@@ -538,7 +535,7 @@ box-icon:hover {
 }
 
 .home-info {
-  margin-top: 9rem;
+  margin-top: 1rem;
 }
 
 .home-info .h1 {
@@ -548,6 +545,7 @@ box-icon:hover {
 /* contact form styling */
 .contact {
   background: rgb(221, 209, 192);
+  padding: 60px 9% 0;
 }
 .contact-container {
   display: grid;
@@ -640,9 +638,9 @@ box-icon:hover {
 }
 
 /*--------About Me-------*/
-#about {
-  padding: 80px 0;
-  color: #ababab;
+.about {
+  padding: 60px 9% 0;
+  color: black;
 }
 
 .row {
