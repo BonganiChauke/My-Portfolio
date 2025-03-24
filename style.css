@@ -50,7 +50,7 @@ html {
 }
 
 html::-webkit-scrollbar {
-  width: 0.6rem;
+  width: 1rem;
 }
 
 html::-webkit-scrollbar-track {
@@ -509,10 +509,6 @@ box-icon:hover {
 
 .contact-box h2 {
   font-size: 4.5rem;
-}
-
-.contact-box p {
-  font-size: 1rem;
 }
 
 .contact-box .desc {
