@@ -78,7 +78,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .home-info .h1{
+      .home-info .h1 {
         font-size: 25px;
       }
     }
@@ -319,15 +319,37 @@
             </div>
 
             <div class="contact-box">
-              <form action="" class="form">
+              <form action="" class="form" id="contact-form">
 
                 <h2 class="heading">Contact <span>Me!</span></h2>
                 <div class="field-box">
-                  <input type="text" placeholder="First Name" id="first_name" required>
-                  <input type="text" placeholder="Last Name" id="last_name" required>
-                  <input type="email" placeholder="Email" id="email" inputmode="email" required>
-                  <input type="text" placeholder="Phone Number" inputmode="tel" id="phone_number">
-                  <textarea name="" id="message" placeholder="Message" required></textarea>
+                  <div class="input-field field">
+                    <input type="text" placeholder="First Name" id="first_name" class="item" autocomplete="off">
+                    <div class="error-txt"><span class="error-msg"></span></div>
+                  </div>
+                  <div class="input-field field">
+                    <input type="text" placeholder="Last Name" id="last_name" class="item" autocomplete="off">
+                    <div class="error-txt"><span class="error-msg"></span></div>
+
+                  </div>
+                  <div class="input-field field">
+                    <input type="email" placeholder="Email" id="email" inputmode="email" class="item"
+                      autocomplete="off">
+                    <div class="error-txt"><span class="error-msg"></span></div>
+
+                  </div>
+                  <div class="input-field field">
+                    <input type="text" placeholder="Phone Number" inputmode="tel" id="phone_number" class="item"
+                      autocomplete="off">
+                    <div class="error-txt"><span class="error-msg"></span></div>
+
+
+                  </div>
+                  <div class="textarea-field field">
+                    <textarea name="" id="message" placeholder="Message" class="item" autocomplete="off"></textarea>
+                    <div class="error-txt"><span class="error-msg"></span></div>
+
+                  </div>
 
                 </div>
 
