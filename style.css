@@ -202,6 +202,18 @@ a {
   animation-delay: 1.6s;
 }
 
+/*
+section {
+  padding: 10rem 9% 2rem;
+  height: 100%;
+  width: 100%;
+  gap: 50px;
+  visibility: hidden;
+  opacity: 0;
+  animation: show-content 1.5s linear forwards;
+  animation-delay: 1.6s;
+}
+  */
 
 .home-info p {
   font-size: 16px;
@@ -393,9 +405,91 @@ a {
 }
 
 .services {
-  padding: 60px 9% 0;
+  padding: 60px 9% 2rem;
   margin-bottom: 2rem;
 }
+
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  height: 2.5rem;
+  gap: 2rem;
+  transition: 0.5s;
+}
+
+.service-container .services-box {
+  padding: 3rem 2.5rem;
+  background: var(--floral-white);
+  border: 0.2rem solid red;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+
+.service-container .services-box:hover {
+  border-color: red;
+  transform: scale(1.02);
+}
+
+.services-box .icon i {
+  font-size: 4rem;
+  transition: 0.5s;
+}
+
+.services-box:hover .icon :not(a i box-icon) {
+  color: red;
+}
+
+.services-box .icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.services-box .icon a {
+  display: inline-flex;
+  background: #e0e0eb;
+  border-radius: 50%;
+  padding: 1rem;
+  transition: 0.5s;
+}
+
+.services-box:hover .icon a {
+  background: red;
+}
+
+.services-box:hover .icon i box-icon {
+  background: red;
+}
+
+box-icon:hover {
+  color: red;
+}
+
+.services-box .icon a i {
+  font-size: 1rem;
+  color: black;
+  transition: 0.5s;
+  transform: rotate(225deg);
+}
+
+.services-box h3 {
+  font-size: 3rem;
+  margin: 0.5rem 0 2rem;
+  transition: 0.5s;
+}
+
+.services-box:hover h3 {
+  color: red;
+}
+
+.services-box .icon a:hover box-icon {
+  transform: rotate(240deg);
+}
+
+.services-box p {
+  font-size: 1rem;
+}
+
 
 /* contact form styling */
 .contact {
@@ -404,7 +498,7 @@ a {
 }
 .contact-container {
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1fr 1fr;
   gap: 3rem;
   border-radius: 2rem;
 }
