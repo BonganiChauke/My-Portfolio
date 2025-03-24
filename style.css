@@ -202,16 +202,6 @@ a {
   animation-delay: 1.6s;
 }
 
-section {
-  padding: 10rem 9% 2rem;
-  height: 100%;
-  width: 100%;
-  gap: 50px;
-  visibility: hidden;
-  opacity: 0;
-  animation: show-content 1.5s linear forwards;
-  animation-delay: 1.6s;
-}
 
 .home-info p {
   font-size: 16px;
@@ -391,7 +381,6 @@ section {
   margin-bottom: 1rem;
 }
 
-
 /* Service style */
 .heading {
   font-size: 4.5rem;
@@ -403,143 +392,9 @@ section {
   color: red;
 }
 
-.services{
+.services {
   padding: 60px 9% 0;
-}
-
-.service-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  height: 5rem;
-  gap: 5rem;
-  transition: 0.5s;
-}
-
-.service-container .services-box {
-  padding: 3rem 2.5rem;
-  background: var(--floral-white);
-  border: 0.2rem solid red;
-  border-radius: 1rem;
-  transition: 0.5s;
-}
-
-.service-container .services-box:hover {
-  border-color: red;
-  transform: scale(1.02);
-}
-
-.services-box .icon i {
-  font-size: 4rem;
-  transition: 0.5s;
-}
-
-.services-box:hover .icon :not(a i box-icon) {
-  color: red;
-}
-
-.services-box .icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.services-box .icon a {
-  display: inline-flex;
-  background: #e0e0eb;
-  border-radius: 50%;
-  padding: 1rem;
-  transition: 0.5s;
-}
-
-.services-box:hover .icon a {
-  background: red;
-}
-
-.services-box:hover .icon i box-icon {
-  background: red;
-}
-
-box-icon:hover {
-  color: red;
-}
-
-.services-box .icon a i {
-  font-size: 3rem;
-  color: black;
-  transition: 0.5s;
-  transform: rotate(225deg);
-}
-
-.services-box h3 {
-  font-size: 3rem;
-  margin: 0.5rem 0 2rem;
-  transition: 0.5s;
-}
-
-.services-box:hover h3 {
-  color: red;
-}
-
-.services-box .icon a:hover box-icon {
-  transform: rotate(240deg);
-}
-
-.services-box p {
-  font-size: 1rem;
-}
-
-.services-box {
   margin-bottom: 2rem;
-}
-
-/* resume section */
-.resume-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 5rem;
-}
-
-.resume-box h2 {
-  font-size: 4.5rem;
-}
-
-.resume-box p {
-  font-size: 1rem;
-}
-
-.resume-box .desc {
-  margin: 2rem 0 2.5rem;
-}
-
-.resume-box .resume-btn {
-  width: 100%;
-  height: 3.5rem;
-  background: red;
-  border: 0.2rem solid black;
-  font-size: 1.6rem;
-  color: white;
-  font-weight: 500;
-  margin-bottom: 2rem;
-  border-radius: 0.8rem;
-  cursor: pointer;
-}
-
-.resume-box .resume-btn.active {
-  border-color: rebeccapurple;
-  color: rebeccapurple;
-}
-
-.resume-box .heading {
-  font-size: 2.5rem;
-  text-align: left;
-}
-
-.home-info {
-  margin-top: 1rem;
-}
-
-.home-info .h1 {
-  font-size: 2rem;
 }
 
 /* contact form styling */
@@ -590,6 +445,9 @@ box-icon:hover {
   color: red;
 }
 
+form {
+  border: solid red;
+}
 .contact-box form {
   background: var(--cultured);
   padding: 2.5rem 3.5rem 3.5rem;
@@ -611,8 +469,6 @@ box-icon:hover {
 .contact-box .field-box input,
 .contact-box .field-box textarea {
   padding: 1.5rem;
-  font-size: 1.6rem;
-  border-radius: 10px;
   font-size: 1rem;
 }
 
@@ -620,11 +476,6 @@ box-icon:hover {
   grid-column: 1 / -1;
   height: 24rem;
   resize: none;
-}
-
-.contact-box .field-box input:focus,
-.contact-box .field-box textarea:focus {
-  border-color: red;
 }
 
 .contact-box .btn {
@@ -668,11 +519,11 @@ box-icon:hover {
   flex-basis: 60%;
 }
 
-.about-col-2 h1{
+.about-col-2 h1 {
   font-size: 3.5rem;
 }
 
-.about-col-2 h1 span{
+.about-col-2 h1 span {
   color: red;
 }
 
@@ -696,7 +547,7 @@ box-icon:hover {
 }
 
 .tab-links::after {
-  content: '';
+  content: "";
   width: 0;
   height: 3px;
   background: red;
@@ -741,8 +592,8 @@ box-icon:hover {
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
-  transition: .5s ease;
-  opacity:0;
+  transition: 0.5s ease;
+  opacity: 0;
   color: white;
   font-size: 15px;
   padding: 20px;
