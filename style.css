@@ -420,7 +420,7 @@ section {
 .service-container .services-box {
   padding: 3rem 2.5rem;
   background: var(--floral-white);
-  border: 0.2rem solid red;
+  border: 0.2rem solid black;
   border-radius: 1rem;
   transition: 0.5s;
 }
@@ -582,7 +582,7 @@ form {
   font-size: 2rem;
 }
 
-/*--------About Me-------*/
+/*------- About Me ------*/
 .about {
   padding: 60px 9% 0;
   color: black;
@@ -673,7 +673,7 @@ form {
   display: block;
 }
 
-/* image to be responsive */
+/* about image to be responsive */
 .img-container {
   position: relative;
   width: 100%;
