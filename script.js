@@ -54,3 +54,8 @@ function opentab(tabname) {
   event.currentTarget.classList.add("active-link");
   document.getElementById(tabname).classList.add("active-tab");
 }
+
+// date 
+const year = document.querySelector('#current-year');
+
+year.innerHTML = new Date().getFullYear();
