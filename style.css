@@ -330,7 +330,7 @@ section {
     transparent,
     transparent,
     transparent,
-    rgb(49, 8, 8)
+    red
   );
   transform: rotate(0deg);
   animation: rotate-border 10s linear infinite;
@@ -406,10 +406,11 @@ section {
 
 .services {
   padding: 60px 9% 2rem;
-  margin-bottom: 2rem;
+  background: #c73659;
+  height: 100vh;
 }
 
-.service-container {
+.services .service-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   height: 2.5rem;
@@ -461,9 +462,6 @@ section {
   background: red;
 }
 
-box-icon:hover {
-  color: red;
-}
 
 .services-box .icon a i {
   font-size: 1rem;
@@ -496,11 +494,11 @@ box-icon:hover {
   background: rgb(221, 209, 192);
   padding: 60px 9% 0;
 }
+
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  border-radius: 2rem;
+  gap: 5rem;
 }
 
 .contact-container .contact-box:first-child {
@@ -556,16 +554,11 @@ form {
   gap: 2rem;
 }
 
+
 .input-field input,
 .textarea-field textarea {
   padding: 1.5rem;
   font-size: 1rem;
-}
-
-#message {
-  grid-column: 1 / -1;
-  height: 24rem;
-  resize: none;
 }
 
 .contact-box .btn {
@@ -577,23 +570,7 @@ form {
   color: blue;
   font-size: 2rem;
 }
-.field .item{
-  width: 100%;
-  padding: 18px;
-}
 
-.field .item{
-  width: 100%;
-  padding: 18px;
-  border: 2px solid black;
-  outline: none;
-  border-radius: 5px;
-  margin: 12px 0;
-}
-
-form .textarea-field .item{
-  resize: none;
-}
 
 form button{
   padding: 12px 32px;
@@ -614,6 +591,17 @@ form button:hover{
   text-align: left;
   margin: -5px 0 10px;
   display: none;
+}
+
+.input-field input{
+  width: 100%;
+}
+
+.textarea-field, textarea {
+  grid-column: 1 / -1; 
+  width: 100%; 
+  height: 24rem; 
+  resize: none;
 }
 
 /*------- About Me ------*/
@@ -733,6 +721,21 @@ form button:hover{
 .img-container:hover .overlay-img {
   opacity: 1;
   border-radius: 0 0 15px 15px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 100%;
+  height: auto;
+}
+
+.footer p{
+  margin-top: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* media queries */
