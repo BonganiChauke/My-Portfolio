@@ -502,7 +502,7 @@ section {
 }
 
 .contact-box h2 {
-  font-size: 4.5rem;
+  font-size: 4rem;
 }
 
 .contact-box .desc {
@@ -517,7 +517,7 @@ section {
 
 .contact-detail i {
   display: inline-flex;
-  font-size: 3rem;
+  font-size: 1rem;
   padding: 1.3rem;
   border-radius: 0.6rem;
   margin-right: 1.5rem;
@@ -541,7 +541,7 @@ form {
 }
 
 .contact-box .heading {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 .contact-box .field-box {
@@ -553,7 +553,7 @@ form {
 
 .input-field input,
 .textarea-field textarea {
-  padding: 1.5rem;
+  padding: 1rem;
   font-size: 1rem;
 }
 
