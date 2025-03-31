@@ -1,5 +1,5 @@
 // form event handling 
-document.getElementById("contact-form").addEventListener('click', (e) => {
+document.getElementById("contact-form").addEventListener('submit', (e) => {
 
     //prevent default load
     e.preventDefault();
@@ -16,5 +16,18 @@ document.getElementById("contact-form").addEventListener('click', (e) => {
 
 
     // if statement to handle inputs
-    
+    if (first_name.value == "") {
+        alert("First name can not be empty")
+    } else if (last_name.value == "") {
+        alert("Last name can be empty")
+    } else if (email.value == "") {
+        alert("Email can not be empty")
+    } else if (phone_number.value == "") {
+        alert("Phone number can not be empty")
+    } else if (message.value == "") {
+        alert("Message can not be empty")
+    } else {
+        alert("Successful Submitted")
+    }
+
 });
