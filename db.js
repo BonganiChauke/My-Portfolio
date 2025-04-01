@@ -1,4 +1,27 @@
 // form event handling 
+
+
+
+    // function to validate user first and last names
+    // Names validation function
+    function validateNames(name) {
+        const hasNumber = /[0-9]/.test(name); // Number
+        const hasSpecialChar = /[!@@#\$%\^\&*\)\(+=._-]/.test(name); // Special character
+
+        let errorMessage = "";
+        if (name === "") errorMessage += "Name is required.\n";
+        if (name.length < 3) errorMessage += "Name cannot be less than 3 letters.\n";
+        if (hasNumber) errorMessage += "Name cannot contain numbers.\n";
+        if (hasSpecialChar) errorMessage += "Name cannot contain special characters.\n";
+
+        return errorMessage;
+    }
+
+    // Function to display error message
+    function displayErrorMessage(elementId, message) {
+        document.getElementById(elementId).textContent = message;
+    }
+
 document.getElementById("contact-form").addEventListener('submit', (e) => {
 
     //prevent default load
@@ -11,23 +34,11 @@ document.getElementById("contact-form").addEventListener('submit', (e) => {
     const phone_number = document.getElementById("phone_number");
     const message = document.getElementById("message");
 
-    // ctrl value
-    const valid = false;
-
-
-    // if statement to handle inputs
-    if (first_name.value == "") {
-        alert("First name can not be empty")
-    } else if (last_name.value == "") {
-        alert("Last name can be empty")
-    } else if (email.value == "") {
-        alert("Email can not be empty")
-    } else if (phone_number.value == "") {
-        alert("Phone number can not be empty")
-    } else if (message.value == "") {
-        alert("Message can not be empty")
-    } else {
-        alert("Successful Submitted")
+    //
+    let nameError = validateNames(first_name)
+    
+    if(nameError !== "" ){
+        displayErrorMessage("error-txtt", nameError)
     }
 
 });
