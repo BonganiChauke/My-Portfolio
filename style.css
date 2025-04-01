@@ -542,13 +542,18 @@ form {
 .textarea-field textarea {
   padding: 1rem;
   font-size: 1rem;
-  border: 0.5px solid black;
+  border: 0.2px solid black;
   outline: none;
+  border-radius: 5px;
 }
 
 .input-field input:focus,
-.textarea-field textarea:hover {
-  border: 3px solid red;
+.textarea-field textarea:focus {
+  border: 1px solid blue;
+}
+
+.field.error .item {
+  border: 1px solid red;
 }
 
 
