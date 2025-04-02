@@ -118,4 +118,7 @@ message.addEventListener("focusout", function () {
 document.getElementById("contact-form").addEventListener("submit", (e) => {
     //prevent default load
     e.preventDefault();
+
+    // if to check if all methods are valid
+    
 });
