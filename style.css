@@ -583,11 +583,10 @@ form button:hover {
 
 .field .error-txt,
 .error-msg {
-  font-size: 14.5px;
+  font-size: 14px;
   color: #d93025;
   text-align: left;
-  margin: -5px 0 10px;
-  display: none;
+  margin: 5px 0 10px;
 }
 
 .input-field input {
