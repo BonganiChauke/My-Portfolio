@@ -7,49 +7,94 @@ const message = document.getElementById("message");
 
 // function to show error message on an input field
 function showError(input, message) {
-  const errorTxt = input.nextElementSibling.querySelector(".error-msg");
-  errorTxt.textContent = message;
-  errorTxt.parentElement.style.visibility = message ? "visible" : "hidden";
+    const errorTxt = input.nextElementSibling.querySelector(".error-msg");
+    errorTxt.textContent = message;
+    errorTxt.parentElement.style.visibility = message ? "visible" : "hidden";
 }
 
-// function to validate user names
+// function to validate user names field
 function validateNames(name, userName) {
-  if (name == "") return "" + userName + " can not be empty";
-  if (/[^A-Za-z]/.test(name))
-    return "" + userName + " must contain only letters";
-  if (name.length < 3)
-    return "" + userName + " must be at least 3 characters long.";
-  return "";
+    if (name == "") return "" + userName + " can not be empty";
+    if (/[^A-Za-z]/.test(name))
+        return "" + userName + " must contain only letters";
+    if (name.length < 3)
+        return "" + userName + " must be at least 3 characters long.";
+    if (name.length > 50)
+        return "" + userName + " must can not exceed 50 characters long.";
+    return "";
 }
 
-// event on focus listener for user first name
-first_name.addEventListener("focusout", function () {
-  const errorMessage = validateNames(first_name.value, "First Name");
-  showError(first_name, errorMessage);
+//function to validate email field
+function validateEmail(email) {
+    if (email == "") return "Email can not be empty";
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) return "Invalid Email Addres"
+    return ""
+}
 
-  // to check the border if inputs are valid
-  if (errorMessage == "") {
-    first_name.style.border = "0.2px solid black";
-  } else {
-    first_name.style.border = "1px solid red";
-  }
+// fuction to validate message field
+function validateMessage(message){
+    if (message == "") return "Message can not be empty";
+    if (message.length > 250) return "Message can not exceed 250 characters";
+    return ""
+}
+
+// ***************************************************
+// event on focus listener for user first name field
+first_name.addEventListener("focusout", function () {
+    const errorMessage = validateNames(first_name.value, "First Name");
+    showError(first_name, errorMessage);
+
+    // to check the border if inputs are valid
+    if (errorMessage == "") {
+        first_name.style.border = "0.2px solid black";
+    } else {
+        first_name.style.border = "1px solid red";
+    }
 });
 
-// event on focus listener for user first name
+// event on focus listener for user first name field
 last_name.addEventListener("focusout", function () {
-  const errorMessage = validateNames(last_name.value, "Last Name");
-  showError(last_name, errorMessage);
+    const errorMessage = validateNames(last_name.value, "Last Name");
+    showError(last_name, errorMessage);
 
-  // to check the border if inputs are valid
-  if (errorMessage == "") {
-    last_name.style.border = "0.2px solid black";
-  }else{
-    last_name.style.border = "1px solid red";
-  }
+    // to check the border if inputs are valid
+    if (errorMessage == "") {
+        last_name.style.border = "0.2px solid black";
+    } else {
+        last_name.style.border = "1px solid red";
+    }
+});
+
+//event focus listener for email field 
+email.addEventListener("focusout", function () {
+    const errorMessage = validateEmail(email.value);
+    showError(email, errorMessage);
+
+    // to check the border if inputs are valid
+    if (errorMessage != "") {
+        email.style.border = "1px solid red";
+    } else {
+        email.style.border = "0.2px solid black";
+    }
+});
+
+// event focus listener for message field
+message.addEventListener("focusout", function() {
+    const messageError = validateMessage(message.value);
+    showError(message, messageError);
+
+    // if to check the border if inputs are valid
+    if(messageError != ""){
+        message.style.border = "1px solid red";
+    }else{
+        message.style.border = "0.2px solid black";
+    }
+
+
 });
 
 // form event handling
 document.getElementById("contact-form").addEventListener("submit", (e) => {
-  //prevent default load
-  e.preventDefault();
+    //prevent default load
+    e.preventDefault();
 });
