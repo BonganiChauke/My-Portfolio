@@ -31,8 +31,16 @@ function validateEmail(email) {
     return ""
 }
 
+// function to validate phone number
+function validatePhoneNumber(phone_number) {
+    if (phone_number == "") return "Phone number can not be empty";
+    if (phone_number.length > 10) return "Phone number must be 10 digits";
+    if (!/^[0-9]+$/.test(phone_number)) return "Phone number must have digits only";
+    return "";
+}
+
 // fuction to validate message field
-function validateMessage(message){
+function validateMessage(message) {
     if (message == "") return "Message can not be empty";
     if (message.length > 250) return "Message can not exceed 250 characters";
     return ""
@@ -78,19 +86,32 @@ email.addEventListener("focusout", function () {
     }
 });
 
+// event focus listener for phone number field
+phone_number.addEventListener("focusout", function () {
+    const errorMessage = validatePhoneNumber(phone_number.value);
+    showError(phone_number, errorMessage);
+
+    // to check the border if inputs are valid
+    if (errorMessage != "") {
+        phone_number.style.border = "1px solid red";
+    } else {
+        phone_number.style.border = "0.2px solid black";
+    }
+
+
+});
+
 // event focus listener for message field
-message.addEventListener("focusout", function() {
+message.addEventListener("focusout", function () {
     const messageError = validateMessage(message.value);
     showError(message, messageError);
 
     // if to check the border if inputs are valid
-    if(messageError != ""){
+    if (messageError != "") {
         message.style.border = "1px solid red";
-    }else{
+    } else {
         message.style.border = "0.2px solid black";
     }
-
-
 });
 
 // form event handling
