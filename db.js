@@ -39,7 +39,7 @@ function validatePhoneNumber(phone_number) {
     return "";
 }
 
-// fuction to validate message field
+// function to validate message field
 function validateMessage(message) {
     if (message == "") return "Message can not be empty";
     if (message.length > 250) return "Message can not exceed 250 characters";
@@ -101,6 +101,7 @@ phone_number.addEventListener("focusout", function () {
 
 });
 
+
 // event focus listener for message field
 message.addEventListener("focusout", function () {
     const messageError = validateMessage(message.value);
@@ -114,11 +115,34 @@ message.addEventListener("focusout", function () {
     }
 });
 
+//function to check all inputs if null
+function checkInputs(){
+    const items = document.querySelectorAll(".item");
+
+    for(const item of items){
+        if(item.value == ""){
+            item.classList.add("error");
+            item.parentElement.classList.add("error");
+            
+        }
+    }    
+}
+
 // form event handling
 document.getElementById("contact-form").addEventListener("submit", (e) => {
     //prevent default load
     e.preventDefault();
 
+    //
+    checkInputs();
+
+
     // if to check if all methods are valid
+    if(!validateNames(first_name) && !validateNames(last_name) && !validateEmail(email) && !validatePhoneNumber(phone_number) && !validateMessage(message)){
+        alert("Please validate the form before submitting");
+    }else{
+        alert("Success");
+        document.getElementById("contact-form").reset();
+    }
     
 });
