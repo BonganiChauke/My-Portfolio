@@ -79,10 +79,10 @@ email.addEventListener("focusout", function () {
     showError(email, errorMessage);
 
     // to check the border if inputs are valid
-    if (errorMessage != "") {
-        email.style.border = "1px solid red";
-    } else {
+    if (errorMessage == "") {
         email.style.border = "0.2px solid black";
+    } else {
+        email.style.border = "1px solid red";
     }
 });
 
@@ -92,12 +92,11 @@ phone_number.addEventListener("focusout", function () {
     showError(phone_number, errorMessage);
 
     // to check the border if inputs are valid
-    if (errorMessage != "") {
-        phone_number.style.border = "1px solid red";
-    } else {
+    if (errorMessage == "") {
         phone_number.style.border = "0.2px solid black";
+    } else {
+        phone_number.style.border = "1px solid red";
     }
-
 
 });
 
@@ -108,24 +107,27 @@ message.addEventListener("focusout", function () {
     showError(message, messageError);
 
     // if to check the border if inputs are valid
-    if (messageError != "") {
-        message.style.border = "1px solid red";
-    } else {
+    if (messageError == "") {
         message.style.border = "0.2px solid black";
+    } else {
+        message.style.border = "1px solid red";
     }
 });
 
 //function to check all inputs if null
-function checkInputs(){
+function checkInputs() {
     const items = document.querySelectorAll(".item");
 
-    for(const item of items){
-        if(item.value == ""){
+    for (const item of items) {
+        if (item.value == "") {
             item.classList.add("error");
             item.parentElement.classList.add("error");
-            
+
+        } else {
+            item.classList.remove("error");
+            item.parentElement.classList.remove("error");
         }
-    }    
+    }
 }
 
 // form event handling
@@ -133,16 +135,32 @@ document.getElementById("contact-form").addEventListener("submit", (e) => {
     //prevent default load
     e.preventDefault();
 
-    //
+    // calling method to check all inputs && validateEmail(email) && validatePhoneNumber(phone_number) && validateMessage(message)
     checkInputs();
 
 
     // if to check if all methods are valid
-    if(!validateNames(first_name) && !validateNames(last_name) && !validateEmail(email) && !validatePhoneNumber(phone_number) && !validateMessage(message)){
-        alert("Please validate the form before submitting");
-    }else{
-        alert("Success");
+    if (validateNames(first_name.value) || validateNames(last_name.value) || validateEmail(email.value) || validatePhoneNumber(phone_number.value) || validateMessage(message.value)) {
+        // alert dialog
+        Swal.fire({
+            icon: "Error",
+            title: "Oops...",
+            text: "Something went wrong!",
+            footer: 'Please ensure that all inputs are valid before submitting'
+        });
+
+    } else {
+
+        //alert dialog 
+        Swal.fire({
+            title: "Success",
+            text: "Message sent Successful",
+            icon: "success"
+        });
+
+        //clears the form
         document.getElementById("contact-form").reset();
+
     }
-    
+
 });
